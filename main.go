@@ -1,14 +1,18 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 )
 
-func main() {
-	a := fmt.Sprint("This is A error \n")
-	b := fmt.Sprint("This is B error \n")
+const (
+	a = "This is A error \n"
+	b = "This is B error \n"
+)
 
-	res := fmt.Sprintf("%s%s", a, b)
-	panic(errors.New(res))
+func print(value string) {
+	fmt.Print(value)
+}
+
+func main() {
+	print(a + b)
 }
